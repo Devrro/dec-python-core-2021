@@ -1,3 +1,4 @@
+from tabulate import tabulate
 # 1)Дан лист:
 #   list = [22, 3,5,2,8,2,-23, 8,23,5]
 #   - найти min число в листе
@@ -31,8 +32,13 @@ for i in range(star_count - 2):
 print('*' * star_count)
 # 3) вывести табличку умножения с помощью цикла while
 i = 1
+math_lst = []
 while i < 10:
-    print(' ')
+    math_list_small = []
+    # print(' ')
     for j in range(1, 10):
-        print(i*j, end=',')
-    i+=1
+        math_list_small.append(j*i)
+        # print(i * j, end=',')
+    i += 1
+    math_lst.append(math_list_small)
+print(tabulate(math_lst, math_lst[0]))
