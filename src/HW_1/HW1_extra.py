@@ -41,4 +41,6 @@ while i < 10:
         # print(i * j, end=',')
     i += 1
     math_lst.append(math_list_small)
-print(tabulate(math_lst, math_lst[0]))
+print(math_lst)
+for row in math_lst:
+    print('{:>1} {:>2} {:>2} {:>2} {:>2} {:>2} {:>2} {:>2} {:>2}'.format(*row))
