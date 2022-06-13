@@ -4,7 +4,7 @@
 #
 # запишите 5 тудушек
 # и выведете все
-from typing import Callable, Tuple
+from typing import Callable
 
 
 def notebook() -> tuple[Callable[[str], list], ...]:
