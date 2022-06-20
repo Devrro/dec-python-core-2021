@@ -1,0 +1,8 @@
+[
+{"note":"Value 1","price":1},
+{"note":"Value 2","price":5},
+{"note":"Value 3","price":10},
+{"note":"Value 4","price":20},
+{"note":"Value 5","price":22},
+{"note":"Value 6","price":5}
+]
