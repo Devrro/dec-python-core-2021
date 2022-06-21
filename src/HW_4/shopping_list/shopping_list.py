@@ -85,7 +85,7 @@ def shopping_list(opt, file_name='shopping_list.txt'):
             case 1:
                 create_note(body_shop_list)
             case 2:
-                # Тут потім додати функцію, яка нормально виводетиме список
+                # Тут потім додати функцію, яка нормально виводитиме список
                 print(body_shop_list)
             case 3:
                 print(get_sum(body_shop_list))
@@ -100,9 +100,10 @@ def shopping_list(opt, file_name='shopping_list.txt'):
                     body_shop_list.clear()
                     open(file_name, 'w').close()
             case 7:
-                break6
+                with open(file_name, 'r+') as shp_lst:
+                    shp_lst.write(json.dumps(body_shop_list))
+                break
         input('Натисність будь-яку клавішу, щоб продовжити')
-
 
 
 # shp_lst.write(json.dumps([{'hello': '1'}]))
