@@ -28,7 +28,7 @@ number_of_options = [
 def p_menu(num_options) -> int:
     print(*num_options, sep='\n')
     while True:
-        num = int(input('Введіть ваш вибір'))
+        num = int(input('Введіть ваш вибір: '))
         if 0 < num <= len(num_options):
             break
         else:
@@ -37,8 +37,14 @@ def p_menu(num_options) -> int:
 
 
 def create_note(lst):
-    note = input('Введіть назву вашої покупки: ')
-    price = int(input('Введіть вартість покупки'))
+    while True:
+        note = input('Введіть назву вашої покупки: ')
+        try:
+            price = int(input('Введіть вартість покупки'))
+            break
+        except Exception as err:
+            print("Неправильне значення! Спробуйте ще раз")
+
     lst.append({'note': note, 'price': price})
 
 
@@ -59,7 +65,7 @@ def similar(a, b):
 
 
 def get_search_value(lst: [{}, ...]):
-    search = 'val 5'
+    search = str(input())
     note, price = max(lst, key=lambda x: similar(search, x["note"])).values()
     return note, price
 
